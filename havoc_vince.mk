@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/vince/device.mk)
 # Inherit some common HavocOS stuff.
 $(call inherit-product, vendor/havoc/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
+
+# Gapps
+WITH_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
@@ -45,5 +48,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=google/redfin/redfin:11/RQ1A.210205.004/7038034:user/release-keys
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ1A.210205.004/7038034:user/release-keys"
-
-
